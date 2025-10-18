@@ -6,23 +6,25 @@
       
       
       
+        <link rel="prev" href="../klipper-via-mainboard-replacement/udev-setup/">
       
-        <link rel="next" href="machine/">
+      
+        <link rel="next" href="modified_start_end_machine_gcode/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>OpenCentauri</title>
+        <title>Patched firmware - OpenCentauri</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -41,14 +43,14 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -77,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-the-opencentauri-documentation" class="md-skip">
+        <a href="#patched-firmware" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +93,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="OpenCentauri" class="md-header__button md-logo" aria-label="OpenCentauri" data-md-component="logo">
+    <a href=".." title="OpenCentauri" class="md-header__button md-logo" aria-label="OpenCentauri" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35z"></path></svg>
@@ -111,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Patched firmware
             
           </span>
         </div>
@@ -190,11 +192,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
         
   
   
@@ -215,7 +215,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="machine/" class="md-tabs__link">
+        <a href="../machine/" class="md-tabs__link">
           
   
   
@@ -235,7 +235,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="software/" class="md-tabs__link">
+        <a href="../software/" class="md-tabs__link">
           
   
   
@@ -251,11 +251,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="mods/machine_mods/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../mods/machine_mods/" class="md-tabs__link">
           
   
   
@@ -291,7 +293,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="OpenCentauri" class="md-nav__button md-logo" aria-label="OpenCentauri" data-md-component="logo">
+    <a href=".." title="OpenCentauri" class="md-nav__button md-logo" aria-label="OpenCentauri" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35z"></path></svg>
@@ -318,32 +320,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -354,35 +334,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#local-docs-development" class="md-nav__link">
-    <span class="md-ellipsis">
-      Local docs development
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -437,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="machine/" class="md-nav__link">
+      <a href="../machine/" class="md-nav__link">
         
   
   
@@ -460,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="machine/mainboard/" class="md-nav__link">
+      <a href="../machine/mainboard/" class="md-nav__link">
         
   
   
@@ -483,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="machine/hotend/" class="md-nav__link">
+      <a href="../machine/hotend/" class="md-nav__link">
         
   
   
@@ -506,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="machine/camera/" class="md-nav__link">
+      <a href="../machine/camera/" class="md-nav__link">
         
   
   
@@ -529,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="machine/bed/" class="md-nav__link">
+      <a href="../machine/bed/" class="md-nav__link">
         
   
   
@@ -552,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="machine/screen/" class="md-nav__link">
+      <a href="../machine/screen/" class="md-nav__link">
         
   
   
@@ -575,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="machine/emmc-tapping/" class="md-nav__link">
+      <a href="../machine/emmc-tapping/" class="md-nav__link">
         
   
   
@@ -648,7 +599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="software/" class="md-nav__link">
+      <a href="../software/" class="md-nav__link">
         
   
   
@@ -671,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="software/partitions/" class="md-nav__link">
+      <a href="../software/partitions/" class="md-nav__link">
         
   
   
@@ -694,7 +645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="software/updates/" class="md-nav__link">
+      <a href="../software/updates/" class="md-nav__link">
         
   
   
@@ -717,7 +668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="software/api/" class="md-nav__link">
+      <a href="../software/api/" class="md-nav__link">
         
   
   
@@ -740,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="software/custom-gcode/" class="md-nav__link">
+      <a href="../software/custom-gcode/" class="md-nav__link">
         
   
   
@@ -763,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="software/embedded-firmware/" class="md-nav__link">
+      <a href="../software/embedded-firmware/" class="md-nav__link">
         
   
   
@@ -786,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="software/FEL-mode/" class="md-nav__link">
+      <a href="../software/FEL-mode/" class="md-nav__link">
         
   
   
@@ -813,26 +764,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -845,7 +799,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Mods
@@ -859,7 +813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mods/machine_mods/" class="md-nav__link">
+      <a href="../mods/machine_mods/" class="md-nav__link">
         
   
   
@@ -882,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mods/printable_mods/" class="md-nav__link">
+      <a href="../mods/printable_mods/" class="md-nav__link">
         
   
   
@@ -905,7 +859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mods/light_mods/" class="md-nav__link">
+      <a href="../mods/light_mods/" class="md-nav__link">
         
   
   
@@ -971,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="klipper-via-mainboard-replacement/" class="md-nav__link">
+      <a href="../klipper-via-mainboard-replacement/" class="md-nav__link">
         
   
   
@@ -994,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="klipper-via-mainboard-replacement/recognize-hotend/" class="md-nav__link">
+      <a href="../klipper-via-mainboard-replacement/recognize-hotend/" class="md-nav__link">
         
   
   
@@ -1017,7 +971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="klipper-via-mainboard-replacement/printer-config/" class="md-nav__link">
+      <a href="../klipper-via-mainboard-replacement/printer-config/" class="md-nav__link">
         
   
   
@@ -1040,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="klipper-via-mainboard-replacement/mainsail-config/" class="md-nav__link">
+      <a href="../klipper-via-mainboard-replacement/mainsail-config/" class="md-nav__link">
         
   
   
@@ -1063,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="klipper-via-mainboard-replacement/udev-setup/" class="md-nav__link">
+      <a href="../klipper-via-mainboard-replacement/udev-setup/" class="md-nav__link">
         
   
   
@@ -1091,8 +1045,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -1101,13 +1057,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
         
           
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -1123,7 +1077,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             Patched firmware
@@ -1134,10 +1088,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="patched-firmware/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Patched firmware
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1148,6 +1124,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features-as-of-v010" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features (as of v0.1.0)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstall" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uninstall
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1160,7 +1192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patched-firmware/modified_start_end_machine_gcode/" class="md-nav__link">
+      <a href="modified_start_end_machine_gcode/" class="md-nav__link">
         
   
   
@@ -1210,17 +1242,60 @@
   
 
 
-<h1 id="welcome-to-the-opencentauri-documentation">Welcome to the OpenCentauri documentation</h1>
-<p>Currently, this project is only documentation to help in discovery of the secrets within the Centauri Carbon.</p>
-<p>Feel free to contribute <a href="https://github.com/suchmememanyskill/OpenCentauri">on Github</a></p>
-<p>There is also a <a href="https://discord.gg/t6Cft3wNJ3">Discord server</a> for collaboration</p>
-<h2 id="local-docs-development">Local docs development</h2>
+<h1 id="patched-firmware">Patched firmware</h1>
+<p>This section describes the installation process and features of OpenCentauri's patched firmware.</p>
+<p>This firmware is based on Elegoo's 1.1.40 firmware, with patches applied to patch out unwanted behaviour and bugs.</p>
+<p>If you find any bugs with this firmware, or want to suggest new features, please do so on the <a href="https://github.com/OpenCentauri/cc-fw-tools" target="_blank">cc-fw-tools</a> repository. Not everything is possible within the limits of patching existing firmware, specifically large features or overhauls are unattainable.</p>
+<p>This project is in a beta state currently, expect some issues!</p>
+<p>This new firmware goes well with <a href="modified_start_end_machine_gcode/">modified machine start and end gcode in OrcaSlicer</a>. Specifically to center the purge line and turn on the light of the printer after starting a print.</p>
+<p>If you need any support, feel free to <a href="https://discord.gg/t6Cft3wNJ3">join the discord</a></p>
+<p>If you'd like to support our work, you can do so on <a href="https://ko-fi.com/opencentauri">Ko-Fi</a> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:">!</p>
+<h2 id="features-as-of-v010">Features (as of v0.1.0)</h2>
+<ul>
+<li>SSH (user: "root", password: "OpenCentauri")</li>
+<li>Developer features (package manager, prevent booting Klipper, etc)</li>
+<li>Bootlogo can be replaced<ul>
+<li><a href="https://github.com/OpenCentauri/cc-fw-tools/tree/main/oc-patches/replace-bootlogo-patch" target="_blank">See available bootlogos on github</a></li>
+</ul>
+</li>
+<li>Exhaust fan no longer automatically turns on during a print<ul>
+<li>Note: In OrcaSlicer the default profile still turns on this fan using a M106 P3 command when using PLA.</li>
+<li>Note: On Elegoo filaments present in OrcaSlicer, the <code>Exhaust fan</code> section present on the Cooling tab inside of a Filament profile is respected. If it is enabled, then exhaust fan will turn on at the specified speed.</li>
+</ul>
+</li>
+<li>Homing position has been set to the front right instead of the front left</li>
+<li>The webui (and other integrations like octoeverywhere and home assistant) now accepts modifications during a print (bug introduced in firmware 1.1.29)</li>
+<li>Connectivity checks (web traffic issue) have been blocked</li>
+<li>OTA updates have been blocked</li>
+<li>New gcode commands: <ul>
+<li>M8212 to turn off the chamber light</li>
+<li>M8213 to turn on the chamber light</li>
+</ul>
+</li>
+</ul>
+<h2 id="installation">Installation</h2>
 <ol>
-<li>Install <a href="https://www.python.org/">Python</a>. On windows, don't forget to check 'add to path' in the installer.</li>
-<li>Install <a href="https://git-scm.com/">Git</a></li>
-<li>Clone this repository <code>git clone https://github.com/suchmememanyskill/OpenCentauri</code></li>
-<li>Inside the repository's folder, run <code>pip install -r requirements.txt</code></li>
-<li>Run <code>mkdocs serve</code> for a live preview of the site</li>
+<li>Download the centauri_carbon_developer_mode executable and run it on a computer on the same network as your Centauri Carbon. Follow the on scren instructions to enable developer mode.<ul>
+<li><a href="https://drive.google.com/file/d/1CROOzsOPZa0S_523WJcTDxCNBs5pvNRz/view?usp=sharing" target="_blank">Windows build (x64)</a></li>
+<li><a href="https://drive.google.com/file/d/1hPIMx2H8KXDDGo888rHW8m7f7IMhWHur/view?usp=sharing" target="_blank">Linux build (x64)</a></li>
+</ul>
+</li>
+<li>Insert a fat32-formatted thumbdrive into your pc.</li>
+<li>Remove <code>update.bin</code> if this is present on your thumbdrive.</li>
+<li>Create an <code>update</code> folder on the thumbdrive if it does not exist already.</li>
+<li>Download <code>update.swu</code> from <a href="https://github.com/OpenCentauri/cc-fw-tools/releases" target="_blank">the latest OC firmware</a>, and copy it into the <code>update</code> folder on your thumbdrive.</li>
+<li>Eject your thumbdrive from your pc and insert it into your Centauri Carbon.</li>
+<li>On your Centauri Carbon, navigate to settings, then to <code>Check for updates</code>. There should be a red dot to the right of <code>Check for updates</code>.</li>
+<li>Click on <code>new version detected</code>. Check if the update prompt says the following: <code>Update local FW</code>. If it does, click on Update.</li>
+<li>Remove the thumbdrive after the machine reboots.</li>
+</ol>
+<p>You should now be greeted by the OpenCentauri splash screen <img alt="🎉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f389.svg" title=":tada:"></p>
+<h2 id="update">Update</h2>
+<p>OpenCentauri builds already have developer mode enabled by default. You can install a newer version of opencentauri by following the instructions from <a href="#installation">Installation</a> from step 2 onwards.</p>
+<h2 id="uninstall">Uninstall</h2>
+<ol>
+<li>Run the centauri_carbon_developer_mode executable again, this time selecting to disable developer mode.</li>
+<li>Follow the local firmware update instructions on the <a href="../software/updates/#updating-locally-via-usb">Updates page</a>.</li>
 </ol>
 
 
@@ -1244,7 +1319,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 27, 2025 22:47:11 UTC">July 27, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 18, 2025 12:03:35 UTC">October 18, 2025</span>
   </span>
 
     
@@ -1254,7 +1329,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2025 21:56:38 UTC">April 30, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 18, 2025 12:03:35 UTC">October 18, 2025</span>
   </span>
 
     
@@ -1341,10 +1416,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tabs", "navigation.expand", "toc.integrate", "content.code.copy"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tabs", "navigation.expand", "toc.integrate", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   
