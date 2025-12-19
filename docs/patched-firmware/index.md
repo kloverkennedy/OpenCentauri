@@ -46,7 +46,7 @@ If you'd like to support our work, you can do so on [Ko-Fi](https://ko-fi.com/op
 
     1. [Download](https://github.com/OpenCentauri/oc-installer/releases/latest/download/oc-installer.zip) the latest OpenCentauri installer release
     1. Insert a fat32-formatted thumbdrive into your pc
-    1. Extract the `install_opencentauri` folder from `oc-installer.zip` onto the thumbdrive
+    1. Extract the `install_opencentauri` folder from `oc-installer.zip` onto the root of the thumbdrive
     1. Eject your thumbdrive from your pc and insert it into your Centauri Carbon
     1. On your Centauri Carbon, navigate to the files tab, then tap the `Usb Drive` menu, then tap the `install_opencentauri` folder
     1. Touch hold the `IMPORT_ME_DO_NOT_PRINT` file, then tap `Import`
@@ -57,7 +57,7 @@ If you'd like to support our work, you can do so on [Ko-Fi](https://ko-fi.com/op
 
     1. [Download](https://github.com/OpenCentauri/oc-installer/releases/latest/download/oc-installer.zip) the latest OpenCentauri installer release
     1. Insert a fat32-formatted thumbdrive into your pc
-    1. Extract the `install_opencentauri` folder from `oc-installer.zip` onto the thumbdrive
+    1. Extract the `install_opencentauri` folder from `oc-installer.zip` onto the root of the thumbdrive
     1. [Download update.swu](https://github.com/OpenCentauri/cc-fw-tools/releases/latest/download/update.swu) and place it inside the `install_opencentauri` folder on your thumbdrive
     1. Eject your thumbdrive from your pc and insert it into your Centauri Carbon
     1. On your Centauri Carbon, navigate to the files tab, then tap the `Usb Drive` menu, then tap the `install_opencentauri` folder
