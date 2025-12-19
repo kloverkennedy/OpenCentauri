@@ -39,14 +39,31 @@ If you'd like to support our work, you can do so on [Ko-Fi](https://ko-fi.com/op
 
 ## Installation
 
-1. [Download](https://github.com/OpenCentauri/oc-installer/releases/latest/download/oc-installer.zip) the latest OpenCentauri installer release
-2. Insert a fat32-formatted thumbdrive into your pc
-3. Extract the `install_opencentauri` folder from `oc-installer.zip` onto the thumbdrive
-4. Eject your thumbdrive from your pc and insert it into your Centauri Carbon
-5. On your Centauri Carbon, navigate to the files tab, then tap the `Usb Drive` menu, then tap the `install_opencentauri` folder
-6. Touch hold the `IMPORT_ME_DO_NOT_PRINT` file, then tap `Import`
-7. Run `Install OpenCentauri (Online)`
-8. Restart when the install process finished
+=== "Online"
+    !!! warning "Online requirement"
+
+        Your Centauri Carbon needs to be connected to the internet in order to download OpenCentauri firmware. Choose the `Local/Offline` installation method if your Centauri Carbon is not connected to the internet.
+
+    1. [Download](https://github.com/OpenCentauri/oc-installer/releases/latest/download/oc-installer.zip) the latest OpenCentauri installer release
+    1. Insert a fat32-formatted thumbdrive into your pc
+    1. Extract the `install_opencentauri` folder from `oc-installer.zip` onto the thumbdrive
+    1. Eject your thumbdrive from your pc and insert it into your Centauri Carbon
+    1. On your Centauri Carbon, navigate to the files tab, then tap the `Usb Drive` menu, then tap the `install_opencentauri` folder
+    1. Touch hold the `IMPORT_ME_DO_NOT_PRINT` file, then tap `Import`
+    1. Run `Install OpenCentauri (Online)`
+    1. Restart when the install process finished
+
+=== "Local/Offline"
+
+    1. [Download](https://github.com/OpenCentauri/oc-installer/releases/latest/download/oc-installer.zip) the latest OpenCentauri installer release
+    1. Insert a fat32-formatted thumbdrive into your pc
+    1. Extract the `install_opencentauri` folder from `oc-installer.zip` onto the thumbdrive
+    1. [Download update.swu](https://github.com/OpenCentauri/cc-fw-tools/releases/latest/download/update.swu) and place it inside the `install_opencentauri` folder on your thumbdrive
+    1. Eject your thumbdrive from your pc and insert it into your Centauri Carbon
+    1. On your Centauri Carbon, navigate to the files tab, then tap the `Usb Drive` menu, then tap the `install_opencentauri` folder
+    1. Touch hold the `IMPORT_ME_DO_NOT_PRINT` file, then tap `Import`
+    1. Run `Install OpenCentauri (Local)`
+    1. Restart when the install process finished
 
 You should now be greeted by the OpenCentauri splash screen :tada:
 
