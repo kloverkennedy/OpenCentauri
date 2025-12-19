@@ -71,7 +71,7 @@ This new firmware goes well with [modified machine start and end gcode in OrcaSl
 
 ## Update
 
-Either accept OTA updates from the device itself, follow the steps again in the [Installation section](#installation)
+Either accept OTA updates from the device itself, or follow the steps again in the [Installation section](#installation)
 
 ## Uninstall
 
