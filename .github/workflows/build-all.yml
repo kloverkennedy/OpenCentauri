@@ -1,6 +1,12 @@
 name: build-all-rust
 on:
   workflow_dispatch:
+  workflow_call:
+    secrets:
+      DECRYPTION_KEY:
+        required: true
+      DECRYPTION_IV:
+        required: true
 
 jobs:
   build-serial-multiplexer:

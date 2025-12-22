@@ -14,11 +14,11 @@ jobs:
     strategy:
       matrix:
         platform:
-          - os-name: Linux-armv7
+          - os-name: linux-armv7
             runs-on: ubuntu-24.04
             target: armv7-unknown-linux-musleabihf
 
-          - os-name: Linux-aarch64
+          - os-name: linux-aarch64
             runs-on: ubuntu-24.04
             target: aarch64-unknown-linux-musl
 
@@ -47,11 +47,12 @@ jobs:
       - name: Package
         env:
           PROJECT: ${{ inputs.project }}
-          PLATFORM: ${{ matrix.platform.target }}
+          PLATFORM: ${{ matrix.platform.os-name }}
+          TARGET: ${{ matrix.platform.target }}
         run: |
           mkdir package
-          mv "$PROJECT/target/$PLATFORM/debug/$PROJECT" "package/$PROJECT-$PLATFORM-debug"
-          mv "$PROJECT/target/$PLATFORM/release/$PROJECT" "package/$PROJECT-$PLATFORM"
+          mv "$PROJECT/target/$TARGET/debug/$PROJECT" "package/$PROJECT-$PLATFORM-debug"
+          mv "$PROJECT/target/$TARGET/release/$PROJECT" "package/$PROJECT-$PLATFORM"
 
       - name: Upload binary
         uses: actions/upload-artifact@v6
