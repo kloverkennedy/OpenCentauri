@@ -23,6 +23,9 @@ jobs:
   
   build-decrypt-update:
     uses: ./.github/workflows/decrypt-update.yml
+    secrets:
+      DECRYPTION_KEY: ${{ secrets.DECRYPTION_KEY }}
+      DECRYPTION_IV: ${{ secrets.DECRYPTION_IV }}
 
   build-bindshell:
     uses: ./.github/workflows/bindshell.yml
