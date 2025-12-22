@@ -1,5 +1,6 @@
 name: build-utf8fix
 on:
+  workflow_call:
   workflow_dispatch:
   push:
     branches:
