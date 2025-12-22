@@ -1,5 +1,7 @@
 name: build-stream-to-serial
 on:
+  workflow_call:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -7,45 +9,7 @@ on:
       - "stream-to-serial/**"
 
 jobs:
-  release:
-    name: Release - ${{ matrix.platform.os-name }}
-    strategy:
-      matrix:
-        platform:
-          - os-name: Linux-armv7
-            runs-on: ubuntu-24.04
-            target: armv7-unknown-linux-musleabihf
-
-          - os-name: Linux-aarch64
-            runs-on: ubuntu-24.04
-            target: aarch64-unknown-linux-musl
-
-    runs-on: ${{ matrix.platform.runs-on }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Build debug binary
-        uses: houseabsolute/actions-rust-cross@v1
-        with:
-          command: build
-          target: ${{ matrix.platform.target }}
-          args: "--locked"
-          strip: true
-          working-directory: stream-to-serial
-      - name: rename debug build
-        run: mv stream-to-serial/target/${{ matrix.platform.target }}/debug/stream-to-serial stream-to-serial/target/${{ matrix.platform.target }}/debug/stream-to-serial-debug
-      - name: Build release binary
-        uses: houseabsolute/actions-rust-cross@v1
-        with:
-          command: build
-          target: ${{ matrix.platform.target }}
-          args: "--locked --release"
-          strip: true
-          working-directory: stream-to-serial
-      - name: Upload binary
-        uses: actions/upload-artifact@v4
-        with:
-          name: stream-to-serial-${{ matrix.platform.os-name }}
-          path: |
-            stream-to-serial/target/${{ matrix.platform.target }}/release/stream-to-serial
-            stream-to-serial/target/${{ matrix.platform.target }}/debug/stream-to-serial-debug
+  build:
+    uses: ./.github/workflows/build-rust.yml
+    with:
+      project: stream-to-serial

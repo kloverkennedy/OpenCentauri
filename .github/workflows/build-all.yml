@@ -1,0 +1,28 @@
+name: build-all-rust
+on:
+  workflow_dispatch:
+
+jobs:
+  build-serial-multiplexer:
+    uses: ./.github/workflows/stream.yml
+  
+  build-networktool:
+    uses: ./.github/workflows/networktool.yml
+
+  build-utf8fix:
+    uses: ./.github/workflows/utf8fix.yml
+
+  build-multiplexer:
+    uses: ./.github/workflows/multiplexer.yml
+
+  build-mcuflasher:
+    uses: ./.github/workflows/mcuflasher.yml
+
+  build-dsp-to-serial:
+    uses: ./.github/workflows/dsp-to-serial.yml
+  
+  build-decrypt-update:
+    uses: ./.github/workflows/decrypt-update.yml
+
+  build-bindshell:
+    uses: ./.github/workflows/bindshell.yml

@@ -1,5 +1,7 @@
-name: build
+name: build-decrypt-update
 on:
+  workflow_call:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -49,8 +51,16 @@ jobs:
           cd decrypt-update/ 
           cross build --target ${{ matrix.platform.target }} --locked --release
 
+      - name: Package
+        env:
+          PROJECT: decrypt-update
+          PLATFORM: ${{ matrix.platform.target }}
+        run: |
+          mkdir package
+          mv "$PROJECT/target/$PLATFORM/release/$PROJECT" "package/$PROJECT-$PLATFORM"
+
       - name: Upload binary
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: decrypt-update-${{ matrix.platform.os-name }}
-          path: decrypt-update/target/${{ matrix.platform.target }}/release/decrypt-update
+          path: package/*
