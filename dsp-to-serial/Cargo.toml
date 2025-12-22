@@ -12,3 +12,4 @@ serialport = "4"
 [profile.release]
 strip = true
 lto = true
+codegen-units = 1
