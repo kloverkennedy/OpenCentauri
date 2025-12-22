@@ -1,0 +1,60 @@
+name: Build rust project
+
+on:
+  workflow_call:
+    inputs:
+      project:
+        required: true
+        type: string
+
+jobs:
+  build:
+    name: Build - ${{ inputs.project }} - ${{ matrix.platform.os-name }}
+    runs-on: ${{ matrix.platform.runs-on }}
+    strategy:
+      matrix:
+        platform:
+          - os-name: Linux-armv7
+            runs-on: ubuntu-24.04
+            target: armv7-unknown-linux-musleabihf
+
+          - os-name: Linux-aarch64
+            runs-on: ubuntu-24.04
+            target: aarch64-unknown-linux-musl
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Build debug binary
+        uses: houseabsolute/actions-rust-cross@v1
+        with:
+          command: build
+          target: ${{ matrix.platform.target }}
+          args: "--locked"
+          strip: true
+          working-directory: ${{ inputs.project }}
+
+      - name: Build release binary
+        uses: houseabsolute/actions-rust-cross@v1
+        with:
+          command: build
+          target: ${{ matrix.platform.target }}
+          args: "--locked --release"
+          strip: true
+          working-directory: ${{ inputs.project }}
+        
+      - name: Package
+        env:
+          PROJECT: ${{ inputs.project }}
+          PLATFORM: ${{ matrix.platform.target }}
+        run: |
+          mkdir package
+          mv "$PROJECT/target/$PLATFORM/debug/$PROJECT" "package/$PROJECT-$PLATFORM-debug"
+          mv "$PROJECT/target/$PLATFORM/release/$PROJECT" "package/$PROJECT-$PLATFORM"
+
+      - name: Upload binary
+        uses: actions/upload-artifact@v6
+        with:
+          name: ${{ inputs.project }}-${{ matrix.platform.os-name }}
+          path: package/*

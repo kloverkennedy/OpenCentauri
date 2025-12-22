@@ -1,5 +1,6 @@
 name: build-utf8fix
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -7,29 +8,7 @@ on:
       - "utf8-fix/**"
 
 jobs:
-  release:
-    name: Release - ${{ matrix.platform.os-name }}
-    strategy:
-      matrix:
-        platform:
-          - os-name: Linux-armv7
-            runs-on: ubuntu-24.04
-            target: armv7-unknown-linux-musleabihf
-
-    runs-on: ${{ matrix.platform.runs-on }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Build binary
-        uses: houseabsolute/actions-rust-cross@v1
-        with:
-          command: build
-          target: ${{ matrix.platform.target }}
-          args: "--locked --release"
-          strip: true
-          working-directory: utf8-fix
-      - name: Upload binary
-        uses: actions/upload-artifact@v4
-        with:
-          name: utf8-fix-${{ matrix.platform.os-name }}
-          path: utf8-fix/target/${{ matrix.platform.target }}/release/utf8-fix
+  build:
+    uses: ./.github/workflows/build-rust.yml
+    with:
+      project: utf8-fix
