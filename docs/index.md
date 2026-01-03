@@ -22,7 +22,7 @@
 
     ---
 
-    [:octicons-arrow-right-24: Read up on the hardware used](/machine)
+    [:octicons-arrow-right-24: Read up on the hardware used](/hardware/CC1)
 
     Information about the hardware used inside the Centauri Carbon. Including full CAD models.
 
