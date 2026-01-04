@@ -55,6 +55,9 @@ Connect the **3.3V Serial UART Tx, Rx, and Ground** between the CC mainboard UAR
 - RX (Receive to board) → TX on your serial adapter  
 - GND → GND
 
+!!! important
+    Do not connect the VCC pin on the Serial UART
+
 See the [mainboard UART0 pinout](mainboard.md#uart0) for the exact pin locations.
 
 ![CC Board UART](assets/CC-Board-UART.jpg)
