@@ -68,7 +68,7 @@ See the [mainboard UART0 pinout](mainboard.md#uart0) for the exact pin locations
 
 There are two methods to connect to the board for FEL mode access. Choose the method that works best for your setup.
 
-#### Method A: USB-C Cable Connection (Recommended for Temporary Setup)
+#### Method A/B: USB-C Cable Connection (Recommended for Temporary Setup)
 
 Connect a modified USB cable (or cable + blocker) from the USB-C port to your host computer.
 
@@ -79,7 +79,7 @@ Connect a modified USB cable (or cable + blocker) from the USB-C port to your ho
 
 ![USB-C Cable Mod](assets/USBC-CABLE-Mod.jpg)
 
-#### Method B: Soldered USB Header (Recommended for Permanent Bench Setup)
+#### Method C: Soldered USB Header (Recommended for Permanent Bench Setup)
 
 !!! note
     This method requires soldering headers to the unpopulated J5 USB connector on the board.
