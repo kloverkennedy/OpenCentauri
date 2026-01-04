@@ -29,6 +29,7 @@ nav:
     - CC1:
       - Hardware: hardware/CC1/index.md
       - Mainboard: hardware/CC1/mainboard.md
+      - FEL & UART Setup: hardware/CC1/fel-uart-setup.md
       - EMMC Tap Points: hardware/CC1/emmc-tapping.md
       - Toolhead: hardware/CC1/toolhead.md
       - Camera: hardware/CC1/camera.md
