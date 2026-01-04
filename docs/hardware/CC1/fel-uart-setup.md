@@ -62,7 +62,11 @@ See the [mainboard UART0 pinout](mainboard.md#uart0) for the exact pin locations
 
 ### 3. FEL / USB Connection
 
-Connect the modified USB cable (or cable + blocker) for FEL connection to the host computer.
+There are two methods to connect to the board for FEL mode access. Choose the method that works best for your setup.
+
+#### Method A: USB-C Cable Connection (Recommended for Temporary Setup)
+
+Connect a modified USB cable (or cable + blocker) from the USB-C port to your host computer.
 
 **Requirements:**
 
@@ -71,7 +75,33 @@ Connect the modified USB cable (or cable + blocker) for FEL connection to the ho
 
 ![USB-C Cable Mod](assets/USBC-CABLE-Mod.jpg)
 
-For instructions on entering FEL mode, see the [FEL mode guide](../../software/FEL-mode.md).
+#### Method B: Soldered USB Header (Recommended for Permanent Bench Setup)
+
+!!! note
+    This method requires soldering headers to the unpopulated J5 USB connector on the board.
+
+**Step 1: Solder the unpopulated USB header J5**
+
+![J5 Location](../../software/assets/J5circled.jpg){ width="400" }
+
+**Step 2: Connect to your computer**
+
+Connect the mainboard to your PC using a USB-A male to dupont female cable.
+The pinout of the dupont connectors is as follows:
+
+| Pin NR | Marking | Function | Remarks |
+|--------|---------|----------|---------|
+| 1 | 5V | 5V | Closest to the type-C connector |
+| 2 | DP | DP | DP and DM are switched compared to standard USB pinout |
+| 3 | DM | DM | |
+| 4 | GND | GND | |
+
+!!! warning
+    Note that DP and DM are switched compared to standard USB pinout.
+
+---
+
+For instructions on entering FEL mode and installing drivers, see the [FEL mode software guide](../../software/FEL-mode.md).
 
 ### 4. Full Setup
 

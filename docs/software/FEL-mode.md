@@ -6,19 +6,12 @@
 !!! danger
     Making mistakes while in FEL mode CAN break your board! Be careful!
 
-## Solder the unpopulated usb header J5.
- ![img](assets/J5circled.jpg){ width="400" }
-
-## Connect to to your computer
-Connect the mainboard to your PC using a USB-A male to dupont female cable.
-The pinout of the dupont connectors is as follows:
-
-| Pin NR | marking| Function | remarks |
-|--|---|----|---|
-| 1 | 5V | 5V | closest to the type-C connector|
-| 2 | DP | DP | DP and DM are switched compared to standard usb pinout |
-| 3 | DM | DM |  |
-| 4 | GND | GND ||
+!!! info "Hardware Setup Required"
+    Before following this guide, ensure you have properly connected your board for FEL access. See the [FEL & UART Bench Setup Guide](../hardware/CC1/fel-uart-setup.md) for detailed hardware connection instructions including:
+    
+    - USB connection options (USB-C cable or soldered header)
+    - UART setup
+    - Power and safety considerations
 
 ## Boot to FEL mode
 Press the reset button while shorting R53 with tweezers.
