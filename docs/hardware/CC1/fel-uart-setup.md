@@ -18,7 +18,7 @@ You will need the following components:
     - *Alternative:* A Raspberry Pi or ESP32 acting as a serial interface
 - **FEL USB Connection** – Choose one of the following options:
     - *Option A:* **Modified USB-A to USB-C Cable** (connects to board's USB-C port) – The VCC (Red) wire must be severed inside the cable, leaving DATA+, DATA-, and Ground intact
-    - *Option B:* **USB Power Blocker** (connects to board's USB-C port) – A dongle combined with a normal cable (e.g., [Amazon Link](https://amzn.to/49mVp3F))
+    - *Option B:* **USB Power Blocker** (connects to a USB-A to C cable via board's USB-C port) – A USB-A power blocker dongle combined with a normal USB-A to C cable (e.g., [Amazon Link](https://amzn.to/49mVp3F))
     - *Option C:* **Soldered J5 USB Header** (requires soldering) – Solder headers to the unpopulated J5 connector and use a USB-A male to dupont female cable
 - **Dupont Jumper Cables** ([Link 1](https://amzn.to/44RJQAe), [Link 2](https://amzn.to/3NsB5GE))
 
