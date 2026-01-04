@@ -16,9 +16,10 @@ You will need the following components:
 - **24V Power Supply**
 - **3.3V USB Serial UART Dongle** (e.g., [Amazon Link](https://amzn.to/3La06pv))
     - *Alternative:* A Raspberry Pi or ESP32 acting as a serial interface
-- **USB Connection (Must Block 24V)**
-    - *Option A:* **Modified USB-A to USB-C Cable** – The VCC (Red) wire must be severed inside the cable, leaving DATA+, DATA-, and Ground intact
-    - *Option B:* **USB Power Blocker** – A dongle combined with a normal cable (e.g., [Amazon Link](https://amzn.to/49mVp3F))
+- **FEL USB Connection** – Choose one of the following options:
+    - *Option A:* **Modified USB-A to USB-C Cable** (connects to board's USB-C port) – The VCC (Red) wire must be severed inside the cable, leaving DATA+, DATA-, and Ground intact
+    - *Option B:* **USB Power Blocker** (connects to board's USB-C port) – A dongle combined with a normal cable (e.g., [Amazon Link](https://amzn.to/49mVp3F))
+    - *Option C:* **Soldered J5 USB Header** (requires soldering) – Solder headers to the unpopulated J5 connector and use a USB-A male to dupont female cable
 - **Dupont Jumper Cables** ([Link 1](https://amzn.to/44RJQAe), [Link 2](https://amzn.to/3NsB5GE))
 
 ## Critical Warnings
