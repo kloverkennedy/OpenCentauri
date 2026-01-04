@@ -65,9 +65,46 @@ This will reboot the system directly into FEL mode without needing to short the 
 
 ## Working with FEL Mode
 
-### Initialize DDR
+### Step 1: Verify FEL Communication
 
-Once in FEL mode, initialize the DDR memory:
+First, verify that FEL mode is working and you can communicate with the chip:
+
+```bash
+xfel version
+```
+
+You should see output similar to:
+
+```
+AWUSBFEX ID=0x00185900(R528/T113) dflag=0x44 dlength=0x08 scratchpad=0x00045000
+```
+
+This confirms that FEL mode is active and communication is working.
+
+### Step 2: Test with Hello World SPL
+
+Run a simple test to verify everything is functioning correctly:
+
+```bash
+sunxi-fel spl uart0-helloworld-sdboot.sunxi
+```
+
+You should see on the UART console:
+
+```
+Hello from Allwinner R528/T113!
+Returning back to FEL.
+```
+
+!!! success
+    If you see this message, everything is working! You can run the `xfel version` and `sunxi-fel spl` commands multiple times and they should continue to function.
+
+!!! info "UART Initialization Required"
+    This command appears to be required to run at least once to correctly initialize the Serial UART on the R528 chip before proceeding with DDR initialization and loading u-Boot.
+
+### Step 3: Initialize DDR
+
+Now that FEL mode is verified, initialize the DDR memory:
 
 ```bash
 ./xfel ddr r528-s3
@@ -109,7 +146,7 @@ The UART console should display:
 [33301]init dram ok
 ```
 
-### Load and Execute u-Boot
+### Step 4: Load and Execute u-Boot
 
 Load a u-Boot image to DRAM via FEL:
 
