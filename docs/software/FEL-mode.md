@@ -7,13 +7,22 @@
     Making mistakes while in FEL mode CAN break your board! Be careful!
 
 !!! info "Hardware Setup Required"
-    Before following this guide, ensure you have properly connected your board for FEL access. See the [FEL & UART Bench Setup Guide](../hardware/CC1/fel-uart-setup.md) for detailed hardware connection instructions including:
+    Before following this guide, ensure you have properly connected your board for FEL access. You will need either:
     
-    - USB connection options (USB-C cable or soldered header)
-    - UART setup
-    - Power and safety considerations
+    - **USB-C cable connection** (with VCC blocked), OR
+    - **Soldered header to FEL pins** (J5 connector)
+    
+    See the [FEL & UART Bench Setup Guide](../hardware/CC1/fel-uart-setup.md) for detailed hardware connection instructions including both USB connection methods, UART setup, and power/safety considerations.
 
 ## Prerequisites
+
+### Install sunxi-fel Tool
+
+Install the sunxi-fel utility (provides `sunxi-fel` command):
+
+```bash
+sudo apt install sunxi-tools
+```
 
 ### Install xfel Tool
 
@@ -53,6 +62,9 @@ When successful, you should see on the UART console:
 [27]BOOT0 commit : 4d16602
 ```
 
+!!! note
+    This UART output will only display if you are booting from u-Boot (using the `efex` command) and your BOOT0 has UART enabled. OpenCentauri enables UART by default in the latest versions. If booting directly into FEL mode via hardware reset, you may not see this output.
+
 ### Method 2: Software Boot (From u-Boot)
 
 If you already have u-Boot running and UART access, you can boot directly to FEL mode by issuing this command in u-Boot:
@@ -88,6 +100,9 @@ Run a simple test to verify everything is functioning correctly:
 ```bash
 sunxi-fel spl uart0-helloworld-sdboot.sunxi
 ```
+
+!!! note
+    The `uart0-helloworld-sdboot.sunxi` file can be found in the [cc-fw-tools](https://github.com/OpenCentauri/cc-fw-tools) repository at `/extra-stuff/emmc/uart0-helloworld-sdboot.sunxi`.
 
 You should see on the UART console:
 
