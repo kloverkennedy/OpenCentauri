@@ -46,7 +46,7 @@ See the [mainboard pinout](mainboard.md#24v-input) for the exact pin locations.
 
 ### 2. UART Connection
 
-Connect the **3.3V Serial UART Tx, Rx, and Ground** between the CC Mainboard UART headers and your serial interface (USB Dongle, Pi, etc.).
+Connect the **3.3V Serial UART Tx, Rx, and Ground** between the CC mainboard UART headers and your serial interface (USB Dongle, Pi, etc.).
 
 **Pin Connections:**
 
